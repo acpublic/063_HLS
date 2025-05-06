@@ -30,9 +30,9 @@ ffmpeg -y -i input.mp4 \
     [v1]scale=w=640:h=360[v1out]; \
     [v2]scale=w=1280:h=720[v2out]; \
     [v3]scale=w=1920:h=1080[v3out]" \
-  -map "[v1out]" -map a -c:v:0 libx264 -b:v:0 800k -c:a aac -b:a 96k -f hls -hls_time 6 -hls_playlist_type vod -hls_segment_filename "./360p_%03d.ts" output/360p.m3u8 \
-  -map "[v2out]" -map a -c:v:1 libx264 -b:v:1 1500k -c:a aac -b:a 128k -f hls -hls_time 6 -hls_playlist_type vod -hls_segment_filename "./720p_%03d.ts" output/720p.m3u8 \
-  -map "[v3out]" -map a -c:v:2 libx264 -b:v:2 3000k -c:a aac -b:a 160k -f hls -hls_time 6 -hls_playlist_type vod -hls_segment_filename "./1080p_%03d.ts" output/1080p.m3u8
+  -map "[v1out]" -map a -c:v:0 libx264 -b:v:0 800k -c:a aac -b:a 96k -f hls -hls_time 6 -hls_playlist_type vod -hls_segment_filename "./360p_%03d.ts" ./360p.m3u8 \
+  -map "[v2out]" -map a -c:v:1 libx264 -b:v:1 1500k -c:a aac -b:a 128k -f hls -hls_time 6 -hls_playlist_type vod -hls_segment_filename "./720p_%03d.ts" ./720p.m3u8 \
+  -map "[v3out]" -map a -c:v:2 libx264 -b:v:2 3000k -c:a aac -b:a 160k -f hls -hls_time 6 -hls_playlist_type vod -hls_segment_filename "./1080p_%03d.ts" ./1080p.m3u8
 ```
 - 360p.m3u8
 - 360p_000.ts, ...
