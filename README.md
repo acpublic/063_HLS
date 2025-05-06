@@ -10,7 +10,7 @@
 sudo apt install ffmpeg
 ```
 
-### サンプル動画ダウンロード(html/hlsを作成して実施)
+### サンプル動画ダウンロード(hls内で実施)
 ```
 wget https://download.blender.org/peach/bigbuckbunny_movies/BigBuckBunny_320x180.mp4 -O input.mp4
 ```
